@@ -1,0 +1,5 @@
+.gateways-list__head {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}

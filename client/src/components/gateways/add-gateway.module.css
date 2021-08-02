@@ -1,0 +1,82 @@
+.header {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background-color: #3232c2;
+    color: #fff;
+    padding: 1rem 0.5rem;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group select {
+    padding: 0.5rem 0.75rem;
+    border-radius: 14px;
+    outline: 0;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #b8b8b8;
+    box-shadow: 0px 0px 2px 3px rgba(184, 184, 184, 0.5);
+}
+
+.devices {
+    border-top: 1px solid #ddd;
+    padding: 0.5rem 0;
+    margin-top: 1.5rem;
+}
+
+.devices__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.devices button {
+    min-width: auto;
+    font-size: 1rem;
+}
+
+.devices__list__head {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 0.25rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.devices__list__head div {
+    width: 30%;
+    text-align: center;
+}
+
+.device-item {
+    display: flex;
+    align-items: center;
+}
+
+.device-item .form-group {
+    width: 30%;
+}
+
+.device-item .delete-device {
+    width: 10%;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding:  1rem;
+}
+
+.footer button {
+    margin-left: 0.5rem;
+}

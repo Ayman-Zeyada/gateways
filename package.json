@@ -1,0 +1,27 @@
+{
+  "name": "gateways",
+  "version": "1.0.0",
+  "description": "This project is managing gateways - master devices that control multiple peripheral devices",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "mocha 'tests/**/*.js' --watch"
+  },
+  "author": "Ayman Zeyada",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.4",
+    "pino": "^7.0.0-rc.2",
+    "pino-pretty": "^5.1.2"
+  }
+}

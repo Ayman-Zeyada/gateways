@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'ABeeZee', sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+.App {
+  width: 75%;
+  margin: 0 auto;
+  height: calc(100% - 6rem);
+  display: flex;
+  padding: 3rem;
+}
+
+.content-wrapper {
+  width: 100%;
+}
+
+.button {
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease-in;
+  cursor: pointer;
+  height: fit-content;
+  padding: 0.35rem 1rem;
+  min-width: 75px;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  transition: all 0.15s ease-out;
+}
+
+.button.button-primary {
+  background-color: #3232c2;
+  color: #fff;
+}
+
+.button.button-primary:hover {
+  background-color: #4646bf;
+  color: #fff;
+}
+
+.button.button-default {
+  background-color: #e4e4e4;
+}
+
+.button.button-default:hover {
+  background-color: #f0eeee;
+}
