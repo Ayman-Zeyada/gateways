@@ -7,6 +7,18 @@ class Logger {
       prettyPrint: true
     });
   }
+
+  info(message) {
+    if (process.env.LOGGER === 'true') {
+      this.logger.info(message);
+    }
+  }
+
+  error(message) {
+    if (process.env.LOGGER === 'true') {
+      this.logger.error(message);
+    }
+  }
 }
 
-module.exports = new Logger().logger;
+module.exports = new Logger();

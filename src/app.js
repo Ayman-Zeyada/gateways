@@ -6,7 +6,6 @@ const gateways = require('./routes/api/gateways');
 const devices = require('./routes/api/devices');
 
 const app = express();
-const port = process.env.PORT || 5000;
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
@@ -22,6 +21,4 @@ database.open((err) => {
 app.use('/api/gateways', gateways);
 app.use('/api/devices', devices);
 
-app.listen(port, () => {
-  logger.info(`app is running on port ${port}`)
-});
+module.exports = app;

@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const DeviceStatus = require('../lib/device-status');
-
 const DeviceSchema = new Schema({
   uid: {
     type: Number,
@@ -13,8 +11,9 @@ const DeviceSchema = new Schema({
     type: String,
   },
   status: {
-    type: Number,
-    defaultValue: DeviceStatus.ONLINE
+    type: String,
+    enum: ['online', 'offline'],
+    default: 'online'
   },
   gatewayId: {
     type: String,

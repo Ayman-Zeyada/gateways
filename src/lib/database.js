@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-const db = require('../../config/keys').mongoURI;
 const logger = require('./logger');
 
 class DataBase {
@@ -13,9 +12,8 @@ class DataBase {
         useFindAndModify: false,
       };
 
-      mongoose.set('runValidators', true);
       mongoose.connect(
-        db,
+        process.env.MONGO_URI,
         options,
       );
   

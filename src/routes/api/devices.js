@@ -9,7 +9,17 @@ const logger = require('../../lib/logger');
 // @route  GET api/devices
 // @desc   Get all devices
 // @access public
-router.get('/', (req, res) => { });
+router.get('/', (req, res) => {
+  logger.info('*** get devices');
+  Device.find()
+    .then(devices => {
+      logger.info('*** get devices success');
+      res.json({ success: true, data: devices });
+    }).catch(err => {
+      logger.error(`*** get devices error: ${err}`);
+      res.status(400).json({ success: false, message: err.message });
+    });
+});
 
 // @route  POST api/devices
 // @desc   create new device
@@ -42,7 +52,7 @@ router.delete('/:id', (req, res) => {
       }, { new: true })
       .then((updatedGateway) => {
         logger.info('*** delete a device by id success');
-        res.send({ success: true, data: updatedGateway})
+        res.json({ success: true, data: updatedGateway})
       })
       .catch(err => {
         logger.error(`*** delete a device by id error ${err}`);
